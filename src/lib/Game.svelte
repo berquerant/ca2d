@@ -80,6 +80,7 @@
     try {
       const d = JSON.parse(str);
       data = fromString(d.string);
+      fieldSize = data.length;
       dispatchOperationEvent("import");
     } catch(e: unknown) {
       dispatchOperationEvent("import failure");

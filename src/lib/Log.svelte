@@ -8,7 +8,7 @@
   // TODO: slow
   function formatLog(xs: any[]): string {
     let s = "";
-    for (let i in xs) {
+    for (const i in xs) {
       s += JSON.stringify({
         seq: i,
         log: xs[i]
@@ -26,8 +26,8 @@
   }
   // Display the last part of textareas.
   afterUpdate(() => {
-    for (let wrappers of document.getElementsByClassName(wrapperName)) {
-      for (let area of wrappers.children) {
+    for (const wrappers of document.getElementsByClassName(wrapperName)) {
+      for (const area of wrappers.children) {
         tail(area);
       }
     }

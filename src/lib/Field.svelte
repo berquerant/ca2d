@@ -7,9 +7,9 @@
   import { createEventDispatcher, afterUpdate } from "svelte";
   afterUpdate(() => {
     // Change go board size.
-    for (let wrapper of document.getElementsByClassName(fieldWrapper)) {
-      let w = wrapper as HTMLDivElement;
-      let style = w.style;
+    for (const wrapper of document.getElementsByClassName(fieldWrapper)) {
+      const w = wrapper as HTMLDivElement;
+      const style = w.style;
       style.setProperty("grid-template-rows", `repeat(${data.length}, ${squareSize})`);
       style.setProperty("grid-template-columns", `repeat(${data[0].length}, ${squareSize})`);
     }
